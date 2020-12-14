@@ -146,14 +146,22 @@ class System:
     def NPSH_required(self, flowrate):
         """
         function that returns indexed NPSHR from dataframe for specified flowrate
+            if flowrate is divisble by 5 (due to dataframe limitations)
         """
-        return  df2[df2['Capacity'] == flowrate]['NPSHR']
+        ##to stop function if Q is not divisible by 5
+        if round(flowrate/5, 0) != (flowrate/5):
+            return None
+        else:
+            return  df2[df2['Capacity'] == flowrate]['NPSHR']
 
     def valid_loc(self, flowrate):
         """
         function that validates position of pump inlet to prevent cavitation in suction pipe
         note #1: can only work for flowrates 0-140 at intervals of 5 due to dataframe restrictions
         """
+        ##to stop function if Q is not divisible by 5
+        if round(flowrate/5, 0) != (flowrate/5):
+            return None
         ##NPSHA is compared with Net Pump Section Head Required at the design flowrate based on data
         if 1 == sum((df2['NPSHR'] < self.NPSH_available(flowrate)) & (df2['Capacity'] == flowrate)):
             print("Proposed elevation of pump,", self.pumplocation, "ft, will work")

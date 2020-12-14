@@ -29,7 +29,7 @@ Finally, perform any function defined with your design flowrate inputted:
 
 Example 1:
 Case where all functions give intended output  
-![Example 1](https://user-images.githubusercontent.com/73856285/102037927-07c90200-3d94-11eb-9045-4d686ed26e4d.PNG)
+![Example 1](https://user-images.githubusercontent.com/73856285/102038390-1bc13380-3d95-11eb-9eae-95ea76825213.PNG)
 
 Example 2:
 Case where marker is out of pump curve bounds

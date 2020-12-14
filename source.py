@@ -92,6 +92,9 @@ class System:
         """
         Q = flowrate
         h = self.head_req(Q)
+        ##to stop function if Q is not divisible by 10
+        if round(Q/10, 0) != (Q/10):
+            return None
         ##assigning list of column names for later use ['Capacity', '7.0-inch',	'6.5-inch',	'6.0-inch',	'5.5-inch', '5.0-inch']
         xval = list(df.columns)
         count1 = 0

@@ -1,2 +1,3 @@
-Packages Required:
-math, numpy, matplotlib.pyplot, pandas
+# numpy==1.18.5
+# pandas==1.1.5
+# matplotlib==3.2.2

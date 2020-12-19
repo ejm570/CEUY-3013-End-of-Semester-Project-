@@ -114,7 +114,7 @@ class System:
                 ##in this case function is ended because pump size meets demand perfectly
                 print('Impeller size that meets demand is', list(df.columns)[index+1])
                 print('Throttling flow is not required')
-            return None
+                return None
         else:
             ##keeps track of NaN values (where flowrate is out of domain)
             countNaN = countNaN+1

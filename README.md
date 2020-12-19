@@ -14,6 +14,10 @@ The data frames were made on a CSV file from the Bell & Gossett Series 80-SC pum
 
 Here is the link to the homework assignment from Water Resources Engineering taught by Prof Ronan that included this graph: (https://drive.google.com/file/d/1cu46UzSR8Pyf7BUtbyjVtWvUDvTcBXX-/view?usp=sharing)
 ## **Example Outputs**
+To allow the program to work first import the class and matplotlib.pyplot:
+1. from source import System
+2. import matplotlib.pyplot as plt
+
 To allow the program to work create three vectors:
 1. suctionpipe = (diameter in ft, length in ft, CH friction factor, sum of minor loss coefficients)
 2. dischargepipe = (diameter in ft, length in ft, CH friction factor, sum of minor loss coefficients)
@@ -22,10 +26,13 @@ To allow the program to work create three vectors:
 Next define object:
 x = System(suctionpipe, dischargepipe, reservoirs, pumplocation in ft)
  
-Finally, perform any function defined with your design flowrate inputted:
+Perform any function defined with your design flowrate inputted:
 1. x.system_curve(flowrate)
 2. x.impeller_size(flowrate)
 3. x.valid_loc(flowrate)
+
+Lastly, show system curve and pump curves:
+plt.show()
 
 Example 1:
 Case where all functions give intended output  

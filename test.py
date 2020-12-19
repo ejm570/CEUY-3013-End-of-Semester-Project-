@@ -1,5 +1,5 @@
 from source import System
-import matplotlib.pyplot as plt
+##import matplotlib.pyplot as plt
 ##spipe = suction pipe
 ##dpipe = discharge pipe
 ##to test code create vectors spipe, dpipe
@@ -12,14 +12,14 @@ dpipe = (3/12, 250, 100, 2.8)
 reservoirs = (-13, 75)
 x = System(spipe, dpipe, reservoirs, 4)
 ##functions that generate primary output
-x.system_curve(90)
-x.impeller_size(90)
-x.valid_loc(90)
+x.system_curve(130)
+x.impeller_size(130)
+x.valid_loc(130)
 ##intermediate functions
-print(x.calc_velocity(90))
-print(x.head_loss(90))
-print(x.head_req(90))
-print(x.NPSH_available(90))
-print(x.NPSH_required(90))
+print(x.calc_velocity(130))
+print(x.head_loss(130))
+print(x.head_req(130))
+print(x.NPSH_available(130))
+print(x.NPSH_required(130))
 ##following line shows plot generated in system_curve function
-plt.show()
+##plt.show()

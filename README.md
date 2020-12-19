@@ -32,7 +32,7 @@ Perform any function defined with your design flowrate inputted:
 3. x.valid_loc(flowrate)
 
 Lastly, show system curve and pump curves:
-plt.show()
+1. plt.show()
 
 Example 1:
 Case where all functions give intended output  

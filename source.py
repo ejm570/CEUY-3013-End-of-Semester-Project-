@@ -79,7 +79,7 @@ class System:
         plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
         print('Design Flowrate =', Q, 'gpm')
         print('Total Head Required =', round(hp, 1), 'ft')
-        return None
+        return
 
     def impeller_size(self, flowrate):
         """
@@ -93,7 +93,7 @@ class System:
         h = self.head_req(Q)
         ##to stop function if Q is not divisible by 10
         if Q%10 != 0:
-            return None
+            return
         ##assigning list of column names for later use ['Capacity', '7.0-inch',	'6.5-inch',	'6.0-inch',	'5.5-inch', '5.0-inch']
         xval = list(df.columns)
         count1 = 0
@@ -113,7 +113,7 @@ class System:
                 ##in this case function is ended because pump size meets demand perfectly
                 print('Impeller size that meets demand is', list(df.columns)[index+1])
                 print('Throttling flow is not required')
-                return None
+                return
             else:
                 ##keeps track of NaN values (where flowrate is out of domain)
                 countNaN = countNaN+1
@@ -131,7 +131,7 @@ class System:
             print("Out of Range: The head required is above all pump capabilities")
         else:
             print("Out of Range: Outside pump curve domain")
-        return None
+        return
 
     def NPSH_available(self, flowrate):
         """
@@ -160,10 +160,10 @@ class System:
         """
         ##to stop function if Q is not divisible by 5
         if round(flowrate/5, 0) != (flowrate/5):
-            return None
+            return
         ##NPSHA is compared with Net Pump Section Head Required at the design flowrate based on data
         if 1 == sum((df2['NPSHR'] < self.NPSH_available(flowrate)) & (df2['Capacity'] == flowrate)):
             print("Proposed elevation of pump,", self.pumplocation, "ft, will work")
         else:
             print("Proposed elevation of pump,", self.pumplocation, "ft, may cause cavitation")
-        return None
+        return

@@ -1,5 +1,5 @@
 from source import System
-##import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 ##spipe = suction pipe
 ##dpipe = discharge pipe
 ##to test code create vectors spipe, dpipe
@@ -22,4 +22,4 @@ print(x.head_req(130))
 print(x.NPSH_available(130))
 print(x.NPSH_required(130))
 ##following line shows plot generated in system_curve function
-##plt.show()
+plt.show()

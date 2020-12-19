@@ -80,7 +80,7 @@ class System:
         plt.show(block=False)
         print('Design Flowrate =', Q, 'gpm')
         print('Total Head Required =', round(hp, 1), 'ft')
-        return plt
+        return None
 
     def impeller_size(self, flowrate):
         """

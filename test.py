@@ -11,7 +11,7 @@ dpipe = (3/12, 250, 100, 2.8)
 reservoirs = (-13, 75)
 x = System(spipe, dpipe, reservoirs, 4)
 ##functions that generate primary output
-x.system_curve(90)
+plt = x.system_curve(90)
 x.impeller_size(90)
 x.valid_loc(90)
 ##intermediate functions
@@ -20,3 +20,5 @@ print(x.head_loss(90))
 print(x.head_req(90))
 print(x.NPSH_available(90))
 print(x.NPSH_required(90))
+##following line prevents the plot from blocking code that comes after plt.show
+plt.show()

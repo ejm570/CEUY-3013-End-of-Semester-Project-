@@ -18,13 +18,13 @@ To allow the program to work first import the class and matplotlib.pyplot:
 1. from source import System
 2. import matplotlib.pyplot as plt
 
-To allow the program to work create three vectors:
+Create three vectors:
 1. suctionpipe = (diameter in ft, length in ft, CH friction factor, sum of minor loss coefficients)
 2. dischargepipe = (diameter in ft, length in ft, CH friction factor, sum of minor loss coefficients)
 3. reservoirs = (elevation of R1 in ft, elevation of R2 in ft)
  
 Next define object:
-x = System(suctionpipe, dischargepipe, reservoirs, pumplocation in ft)
+1. x = System(suctionpipe, dischargepipe, reservoirs, pump inlet elevation in ft)
  
 Perform any function defined with your design flowrate inputted:
 1. x.system_curve(flowrate)

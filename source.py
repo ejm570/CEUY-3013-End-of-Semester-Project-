@@ -115,9 +115,9 @@ class System:
                 print('Impeller size that meets demand is', list(df.columns)[index+1])
                 print('Throttling flow is not required')
                 return None
-        else:
-            ##keeps track of NaN values (where flowrate is out of domain)
-            countNaN = countNaN+1
+            else:
+                ##keeps track of NaN values (where flowrate is out of domain)
+                countNaN = countNaN+1
         ##if-statement below identifies cases where pump size cannot be determined because of pump curve limitations
         ##this happens when all four cases in the first statement are untrue (else statement)
         ##(i.e. when pump head in pump curve right below point of head required is NaN)

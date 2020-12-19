@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-df = pd.read_csv('Bell & Gossett Pump Curves.csv')
-df2 = pd.read_csv('Bell & Gossett NPSHR.csv')
+df = pd.read_csv('input/Bell & Gossett Pump Curves.csv')
+df2 = pd.read_csv('input/Bell & Gossett NPSHR.csv')
 
 class System:
     def __init__(self, suctionpipe, dischargepipe, reservoirs, pumplocation):

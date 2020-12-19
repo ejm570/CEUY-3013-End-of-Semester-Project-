@@ -77,8 +77,6 @@ class System:
         plt.xlabel('Flowrate (GPM)')
         plt.ylabel('Head (ft)')
         plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
-        plt.ion()
-        plt.show()
         print('Design Flowrate =', Q, 'gpm')
         print('Total Head Required =', round(hp, 1), 'ft')
         return None

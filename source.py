@@ -149,7 +149,7 @@ class System:
         """
         ##to stop function if Q is not divisible by 5
         if round(flowrate/5, 0) != (flowrate/5):
-            return None
+            return
         else:
             return  df2[df2['Capacity'] == flowrate]['NPSHR']
 

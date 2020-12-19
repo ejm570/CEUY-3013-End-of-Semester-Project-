@@ -1,6 +1,6 @@
 # CEUY-3013-End-of-Semester-Project-
 ## **Summary**
-This code models a simple pump system. The type of system that this code works for includes one pipe, one suction pipe and one discharge pipe that connects two reservoirs. The program does five different things:
+This code models a simple pump system. The type of system that this code works for includes one pump, one suction pipe and one discharge pipe that connects two reservoirs. The program does five different things:
 1. Calculates the amount of head the pump needs to add in order for the system to work at a specified flowrate
 2. Develops the system curve to model the head required vs. demand through the system
 3. Compares the system curve to Bell & Gossett Series 80-SC pump curves and suggests the impeller size to choose if the point falls within the pump curves’ bounds

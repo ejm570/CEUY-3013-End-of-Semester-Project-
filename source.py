@@ -148,8 +148,8 @@ class System:
             if flowrate is divisble by 5 (due to dataframe limitations)
         """
         ##to stop function if Q is not divisible by 5
-        if round(flowrate/5, 0) != (flowrate/5):
-            return
+        if flowrate%5 != 0:
+            return "N/A"
         else:
             return  df2[df2['Capacity'] == flowrate]['NPSHR']
 
